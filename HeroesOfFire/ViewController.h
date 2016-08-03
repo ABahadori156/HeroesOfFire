@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+// Create the IBOutlet Collection
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *heroImageViews;
 
 
 @end

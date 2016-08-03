@@ -13,6 +13,9 @@
 		3515343E1D502A9D00489EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3515343C1D502A9D00489EF5 /* Main.storyboard */; };
 		351534401D502A9D00489EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3515343F1D502A9D00489EF5 /* Assets.xcassets */; };
 		351534431D502A9D00489EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351534411D502A9D00489EF5 /* LaunchScreen.storyboard */; };
+		35E4B3161D512A4A00086FB3 /* HeroesLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E4B3151D512A4A00086FB3 /* HeroesLibrary.m */; };
+		35E4B3191D516C1E00086FB3 /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E4B3181D516C1E00086FB3 /* Hero.m */; };
+		35E4B31C1D5182F600086FB3 /* HeroDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E4B31B1D5182F600086FB3 /* HeroDetailVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		3515343F1D502A9D00489EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		351534421D502A9D00489EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		351534441D502A9D00489EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35E4B3141D512A4A00086FB3 /* HeroesLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroesLibrary.h; sourceTree = "<group>"; };
+		35E4B3151D512A4A00086FB3 /* HeroesLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroesLibrary.m; sourceTree = "<group>"; };
+		35E4B3171D516C1E00086FB3 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		35E4B3181D516C1E00086FB3 /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
+		35E4B31A1D5182F600086FB3 /* HeroDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroDetailVC.h; sourceTree = "<group>"; };
+		35E4B31B1D5182F600086FB3 /* HeroDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroDetailVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +71,13 @@
 				351534371D502A9D00489EF5 /* AppDelegate.m */,
 				351534391D502A9D00489EF5 /* ViewController.h */,
 				3515343A1D502A9D00489EF5 /* ViewController.m */,
+				35E4B31A1D5182F600086FB3 /* HeroDetailVC.h */,
+				35E4B31B1D5182F600086FB3 /* HeroDetailVC.m */,
 				3515343C1D502A9D00489EF5 /* Main.storyboard */,
+				35E4B3141D512A4A00086FB3 /* HeroesLibrary.h */,
+				35E4B3151D512A4A00086FB3 /* HeroesLibrary.m */,
+				35E4B3171D516C1E00086FB3 /* Hero.h */,
+				35E4B3181D516C1E00086FB3 /* Hero.m */,
 				3515343F1D502A9D00489EF5 /* Assets.xcassets */,
 				351534411D502A9D00489EF5 /* LaunchScreen.storyboard */,
 				351534441D502A9D00489EF5 /* Info.plist */,
@@ -150,7 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E4B3191D516C1E00086FB3 /* Hero.m in Sources */,
 				3515343B1D502A9D00489EF5 /* ViewController.m in Sources */,
+				35E4B3161D512A4A00086FB3 /* HeroesLibrary.m in Sources */,
+				35E4B31C1D5182F600086FB3 /* HeroDetailVC.m in Sources */,
 				351534381D502A9D00489EF5 /* AppDelegate.m in Sources */,
 				351534351D502A9D00489EF5 /* main.m in Sources */,
 			);
@@ -301,6 +319,7 @@
 				351534491D502A9D00489EF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

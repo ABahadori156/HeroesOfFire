@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "HeroDetailVC.h"
+#import "Hero.h"
 
 @interface ViewController ()
 
@@ -16,12 +18,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // I want to iterate through each hero from my dictionaries and assign their pictures to each imageView on my masterVC
+    // So hero 0's picture goes with imageView0
+    for (NSUInteger index = 0; index < self.heroImageViews.count; index++) {
+        Hero *hero = [[Hero alloc] initWithIndex:index];
+        UIImageView *heroImageView = self.heroImageViews[index];
+        
+        heroImageView.image = hero.heroPictureIcon;
+        heroImageView.backgroundColor = hero.heroBackgroundColor;
+    }
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(IBAction)showHeroDetail:(id)sender{
+    [self performSegueWithIdentifier:@"segueToHeroDetail" sender:sender];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"segueToHeroDetail"]) {
+        UIImageView *tapHeroImageView = (UIImageView *)[sender view];
+        
+        if ([self.heroImageViews containsObject:tapHeroImageView]) {
+            NSUInteger index = [self.heroImageViews indexOfObject:tapHeroImageView];
+            
+            HeroDetailVC *dvc = (HeroDetailVC *)segue.destinationViewController;
+            
+            // I transfer hero which is an instance of the Hero class
+            dvc.hero = [[Hero alloc] initWithIndex:index];
+        }
+        
+        
+        
+        
+    }
+}
+
 
 @end
