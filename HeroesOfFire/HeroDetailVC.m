@@ -7,6 +7,7 @@
 //
 
 #import "HeroDetailVC.h"
+#import "Hero.h"
 
 @interface HeroDetailVC ()
 
@@ -16,13 +17,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if (self.hero) {
+        self.heroCoverImage.image = self.hero.heroPictureDetail;
+        self.heroCoverImage.backgroundColor = self.hero.heroBackgroundColor;
+        self.heroName.text = self.hero.heroName;
+        self.heroDescription.text = self.hero.heroDescription;
+        self.miniView.image = self.hero.heroPictureMini;
+        
+        self.heroMove0.text = self.hero.heroMoveList[0];
+        self.heroMove1.text = self.hero.heroMoveList[1];
+        self.heroMove2.text = self.hero.heroMoveList[2];
+        self.heroMove3.text = self.hero.heroMoveList[3];
+        
+    }
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 /*
 #pragma mark - Navigation

@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Heroes of Fire-->
@@ -163,16 +164,13 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxG-cH-FTv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxG-cH-FTv">
                                         <rect key="frame" x="20" y="39" width="280" height="43"/>
                                         <string key="text">This is a detailed description of this particular hero which includes where they're from, what their expertise is, and some fun facts</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BowMini" translatesAutoresizingMaskIntoConstraints="NO" id="a2r-yT-7Dq">
-                                        <rect key="frame" x="112" y="3" width="28" height="35"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -209,11 +207,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1i-VM-TM6">
-                                <rect key="frame" x="20" y="463" width="48" height="18"/>
+                                <rect key="frame" x="20" y="463" width="110" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BowMini" translatesAutoresizingMaskIntoConstraints="NO" id="a2r-yT-7Dq">
+                                <rect key="frame" x="192" y="385" width="64" height="57"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.18039215689999999" green="0.20392156859999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -222,6 +223,7 @@
                             <constraint firstItem="g1i-VM-TM6" firstAttribute="leading" secondItem="aIU-l9-PmL" secondAttribute="leading" constant="20" id="AjF-pg-Pua"/>
                             <constraint firstItem="ZHZ-uO-YAJ" firstAttribute="top" secondItem="XBR-vN-QhE" secondAttribute="bottom" id="Der-bS-D81"/>
                             <constraint firstItem="ZHZ-uO-YAJ" firstAttribute="leading" secondItem="aIU-l9-PmL" secondAttribute="leading" id="G7h-pt-FkJ"/>
+                            <constraint firstItem="a2r-yT-7Dq" firstAttribute="leading" secondItem="aIU-l9-PmL" secondAttribute="leadingMargin" constant="172" id="Ihg-6M-Znb"/>
                             <constraint firstItem="G9m-Lm-22a" firstAttribute="top" secondItem="T5B-0L-dPK" secondAttribute="bottom" constant="8" id="KJE-fp-PlN"/>
                             <constraint firstItem="g1i-VM-TM6" firstAttribute="top" secondItem="G9m-Lm-22a" secondAttribute="bottom" constant="8" id="Kup-VR-fdT"/>
                             <constraint firstItem="pnt-Cd-HSP" firstAttribute="leading" secondItem="aIU-l9-PmL" secondAttribute="leading" constant="20" id="MTN-3n-hGv"/>
@@ -229,10 +231,11 @@
                             <constraint firstAttribute="trailing" secondItem="T5B-0L-dPK" secondAttribute="trailing" constant="252" id="Pf8-Dd-zD6"/>
                             <constraint firstAttribute="trailing" secondItem="G9m-Lm-22a" secondAttribute="trailing" constant="252" id="QYu-xF-cFc"/>
                             <constraint firstItem="Cg9-H6-muy" firstAttribute="bottom" secondItem="ZHZ-uO-YAJ" secondAttribute="bottom" id="RWQ-4D-Zf8"/>
+                            <constraint firstItem="a2r-yT-7Dq" firstAttribute="top" secondItem="Cg9-H6-muy" secondAttribute="bottom" constant="31" id="SD0-G6-tvO"/>
                             <constraint firstAttribute="trailing" secondItem="pnt-Cd-HSP" secondAttribute="trailing" constant="252" id="U29-cR-YaN"/>
                             <constraint firstItem="T5B-0L-dPK" firstAttribute="leading" secondItem="aIU-l9-PmL" secondAttribute="leading" constant="20" id="Uwi-vh-Ye6"/>
                             <constraint firstItem="pnt-Cd-HSP" firstAttribute="top" secondItem="bqm-sU-6Fi" secondAttribute="bottom" constant="2" id="cJm-Vf-Ttb"/>
-                            <constraint firstAttribute="trailing" secondItem="g1i-VM-TM6" secondAttribute="trailing" constant="252" id="jT2-GP-b4h"/>
+                            <constraint firstAttribute="trailing" secondItem="g1i-VM-TM6" secondAttribute="trailing" constant="190" id="jT2-GP-b4h"/>
                             <constraint firstItem="G9m-Lm-22a" firstAttribute="leading" secondItem="aIU-l9-PmL" secondAttribute="leading" constant="20" id="koL-3x-vku"/>
                             <constraint firstItem="bqm-sU-6Fi" firstAttribute="top" secondItem="Cg9-H6-muy" secondAttribute="bottom" constant="8" id="lDo-gr-OxG"/>
                             <constraint firstItem="T5B-0L-dPK" firstAttribute="top" secondItem="pnt-Cd-HSP" secondAttribute="bottom" constant="8" id="xD5-lq-Jwc"/>

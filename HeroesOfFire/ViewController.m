@@ -37,14 +37,16 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"segueToHeroDetail"]) {
+        
         UIImageView *tapHeroImageView = (UIImageView *)[sender view];
         
         if ([self.heroImageViews containsObject:tapHeroImageView]) {
+            // Here we set the index as the heroImageView that was tapped - so if the third hero was tapped, this index will be 2
             NSUInteger index = [self.heroImageViews indexOfObject:tapHeroImageView];
             
             HeroDetailVC *dvc = (HeroDetailVC *)segue.destinationViewController;
             
-            // I transfer hero which is an instance of the Hero class
+            // we use the index that we created to create that particular tapped hero's instance, and then assign that hero instance to the HeroDetailVC.h hero property
             dvc.hero = [[Hero alloc] initWithIndex:index];
         }
         
